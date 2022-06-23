@@ -1,14 +1,14 @@
 function all(promises) {
   // write your code here
   const result = [];
-  let setledPromises = 0;
+  let settledPromises = 0;
 
   return new Promise((resolve, reject) => {
     promises.forEach((promise, i) => {
       promise
         .then((value) => {
           result[i] = value;
-          setledPromises++;
+          settledPromises++;
           if (settledPromises == promises.length) {
             resolve(result);
           }

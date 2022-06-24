@@ -9,7 +9,7 @@ function throttle(func, delay){
     let args = arguments;
     
     if(flag ==true){
-      setTimeout(()=> flag= true)
+      setTimeout(()=> flag= true,delay)
       flag = false;
       func.apply(context,args)
     }
